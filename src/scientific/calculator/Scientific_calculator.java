@@ -439,11 +439,11 @@ public class Scientific_calculator extends javax.swing.JFrame {
         
     }//GEN-LAST:event_editNumberActionPerformed
 
-    private void editResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editResultActionPerformed
+    private void editResultActionPerformed(java.awt.event.ActionEvent evt) {                                           
         // TODO add your handling code here:
     }
 
-    private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResultActionPerformed
+    private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {                                          
         String answer;
         secondNum = Double.parseDouble(editNumber.getText());
         
@@ -537,7 +537,7 @@ public class Scientific_calculator extends javax.swing.JFrame {
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
                                              
-        String enterNum = editNumber.getText() + btn6.getText();
+         String enterNum = editNumber.getText() + btn6.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn6ActionPerformed
 
@@ -552,8 +552,54 @@ public class Scientific_calculator extends javax.swing.JFrame {
         String enterNum = editNumber.getText() + btn9.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn9ActionPerformed
+       private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {
+  //GEN-FIRST:event_addBtnActionPerformed
+        if (editNumber.getText().isEmpty()) {       
+      }else { 
+           firstNum = Double.parseDouble(editNumber.getText());
+           editNumber.setText("");
+        }
+         operator = "+";
+    }
+    private void subBtnActionPerformed(java.awt.event.ActionEvent evt) {
+  //GEN-FIRST:event_subBtnActionPerformed
+                                               
+        if (editNumber.getText().isEmpty()) {
+            
+        }else {
+        
+        firstNum = Double.parseDouble(editNumber.getText());
+        editNumber.setText("");
+        }
+        operator = "-";
+    }//GEN-LAST:event_subBtnActionPerformed
 
-   
+    private void mulBtnActionPerformed(java.awt.event.ActionEvent evt) {
+  //GEN-FIRST:event_mulBtnActionPerformed                                             
+           if (editNumber.getText().isEmpty()) {
+            
+        }else {
+        
+        firstNum = Double.parseDouble(editNumber.getText());
+        editNumber.setText("");
+        }
+        operator = "*";
+    }//GEN-LAST:event_mulBtnActionPerformed
+
+    private void devideBtnActionPerformed(java.awt.event.ActionEvent evt) {
+  //GEN-FIRST:event_devideBtnActionPerformed
+                                               
+        if (editNumber.getText().isEmpty()) {
+            
+        }else {
+        
+        firstNum = Double.parseDouble(editNumber.getText());
+          editNumber.setText("") ;
+        }
+        operator = "/" ;
+    }
+  //GEN-LAST:event_devideBtnActionPerformed
+    
     private void offBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offBtnActionPerformed
         JFrame frame = new JFrame("Exit");
         if (JOptionPane.showConfirmDialog(frame,"Confirm want to Exit ?","Calculator",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION)
