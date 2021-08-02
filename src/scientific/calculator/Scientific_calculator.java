@@ -16,8 +16,8 @@ public class Scientific_calculator extends javax.swing.JFrame {
     double result = 0;
     double prevResult;
     String operator;
-    
-    
+
+
     public Scientific_calculator() {
         initComponents();
     }
@@ -421,7 +421,7 @@ public class Scientific_calculator extends javax.swing.JFrame {
         editNumber.setText("");
         firstNum = 0;
         secondNum = 0;
-        
+
     }//GEN-LAST:event_ansBtnActionPerformed
 
     private void acBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acBtnActionPerformed
@@ -432,21 +432,21 @@ public class Scientific_calculator extends javax.swing.JFrame {
         result = 0;
         prevResult = 0;
         operator = "";
-        
+
     }//GEN-LAST:event_acBtnActionPerformed
 
     private void editNumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editNumberActionPerformed
-        
+
     }//GEN-LAST:event_editNumberActionPerformed
 
-    private void editResultActionPerformed(java.awt.event.ActionEvent evt) {                                           
+    private void editResultActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }
 
-    private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void btnResultActionPerformed(java.awt.event.ActionEvent evt) {
         String answer;
         secondNum = Double.parseDouble(editNumber.getText());
-        
+
         if (operator.equals("+")) {
             result = prevResult + (firstNum + secondNum);
             answer = String.format("%.2f", result);
@@ -506,56 +506,56 @@ public class Scientific_calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn2.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn1.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn3.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn4.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn5.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
-                                             
+
          String enterNum = editNumber.getText() + btn6.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn8.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
-                                             
+
         String enterNum = editNumber.getText() + btn9.getText();
         editNumber.setText(enterNum);
     }//GEN-LAST:event_btn9ActionPerformed
        private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {
   //GEN-FIRST:event_addBtnActionPerformed
-        if (editNumber.getText().isEmpty()) {       
-      }else { 
+        if (editNumber.getText().isEmpty()) {
+      }else {
            firstNum = Double.parseDouble(editNumber.getText());
            editNumber.setText("");
         }
@@ -563,11 +563,11 @@ public class Scientific_calculator extends javax.swing.JFrame {
     }
     private void subBtnActionPerformed(java.awt.event.ActionEvent evt) {
   //GEN-FIRST:event_subBtnActionPerformed
-                                               
+
         if (editNumber.getText().isEmpty()) {
-            
+
         }else {
-        
+
         firstNum = Double.parseDouble(editNumber.getText());
         editNumber.setText("");
         }
@@ -575,11 +575,11 @@ public class Scientific_calculator extends javax.swing.JFrame {
     }//GEN-LAST:event_subBtnActionPerformed
 
     private void mulBtnActionPerformed(java.awt.event.ActionEvent evt) {
-  //GEN-FIRST:event_mulBtnActionPerformed                                             
+  //GEN-FIRST:event_mulBtnActionPerformed
            if (editNumber.getText().isEmpty()) {
-            
+
         }else {
-        
+
         firstNum = Double.parseDouble(editNumber.getText());
         editNumber.setText("");
         }
@@ -588,22 +588,22 @@ public class Scientific_calculator extends javax.swing.JFrame {
 
     private void devideBtnActionPerformed(java.awt.event.ActionEvent evt) {
   //GEN-FIRST:event_devideBtnActionPerformed
-                                               
+
         if (editNumber.getText().isEmpty()) {
-            
+
         }else {
-        
+
         firstNum = Double.parseDouble(editNumber.getText());
           editNumber.setText("") ;
         }
         operator = "/" ;
     }
   //GEN-LAST:event_devideBtnActionPerformed
-    
+
     private void offBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offBtnActionPerformed
         JFrame frame = new JFrame("Exit");
         if (JOptionPane.showConfirmDialog(frame,"Confirm want to Exit ?","Calculator",JOptionPane.YES_NO_OPTION) == JOptionPane.YES_NO_OPTION)
-        
+
         {
             System.exit(0);
         }
@@ -613,7 +613,7 @@ public class Scientific_calculator extends javax.swing.JFrame {
         String st = editNumber.getText();
         st = st.substring(0, st.length() - 1);
         editNumber.setText(st);
-        
+
     }//GEN-LAST:event_cBtnActionPerformed
 
     private void percenBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_percenBtnActionPerformed
@@ -632,21 +632,21 @@ public class Scientific_calculator extends javax.swing.JFrame {
         result = Math.sqrt(firstNum);
         editNumber.setText("√" + firstNum);
         editResult.setText(String.valueOf(result));
-        
+
     }//GEN-LAST:event_rootBtnActionPerformed
 
     private void powerBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_powerBtnActionPerformed
-                                                
+
         firstNum = Double.parseDouble(editNumber.getText());
-      
+
         editNumber.setText("");
         operator = "^";
-        
-   
+
+
     }//GEN-LAST:event_powerBtnActionPerformed
 
     private void sinBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sinBtnActionPerformed
-        
+
         operator = "sin";
     }//GEN-LAST:event_sinBtnActionPerformed
 
@@ -674,7 +674,7 @@ public class Scientific_calculator extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
